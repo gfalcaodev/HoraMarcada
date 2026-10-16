@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 2: Dossiê do Caso (NestedScrollView como raiz, com um único filho direto) -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_madeira"
+    android:fillViewport="true"
+    tools:context=".CasoActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutConteudoCaso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 1. Identificação, título e classificação -->
+        <TextView
+            android:id="@+id/textIdentificacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dossie_identificacao"
+            android:textColor="@color/vinho"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textTituloDossie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/dossie_titulo"
+            android:textColor="@color/texto_papel"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textClassificacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dossie_classificacao"
+            android:textColor="@color/texto_sepia"
+            android:textSize="14sp" />
+
+        <!-- 2. Resumo da ocorrência -->
+        <TextView
+            android:id="@+id/textSecaoResumo"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_resumo" />
+
+        <TextView
+            android:id="@+id/textResumo"
+            style="@style/FichaTexto"
+            android:text="@string/texto_resumo" />
+
+        <!-- 3. Suspeitos -->
+        <TextView
+            android:id="@+id/textSecaoSuspeitos"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_suspeitos" />
+
+        <TextView
+            android:id="@+id/textSuspeitoAurelio"
+            style="@style/FichaTexto"
+            android:text="@string/suspeito_aurelio" />
+
+        <TextView
+            android:id="@+id/textSuspeitaLivia"
+            style="@style/FichaTexto"
+            android:layout_marginTop="8dp"
+            android:text="@string/suspeito_livia" />
+
+        <TextView
+            android:id="@+id/textSuspeitoRafael"
+            style="@style/FichaTexto"
+            android:layout_marginTop="8dp"
+            android:text="@string/suspeito_rafael" />
+
+        <TextView
+            android:id="@+id/textHipoteseRelogio"
+            style="@style/FichaTexto"
+            android:layout_marginTop="8dp"
+            android:text="@string/hipotese_relogio" />
+
+        <!-- 4a. Evidências textuais -->
+        <TextView
+            android:id="@+id/textSecaoEvidencias"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_evidencias" />
+
+        <TextView
+            android:id="@+id/textTituloLaudo"
+            style="@style/SubtituloFicha"
+            android:layout_marginTop="0dp"
+            android:text="@string/titulo_laudo" />
+
+        <TextView
+            android:id="@+id/textLaudo"
+            style="@style/FichaTexto"
+            android:text="@string/texto_laudo" />
+
+        <TextView
+            android:id="@+id/textTituloSino"
+            style="@style/SubtituloFicha"
+            android:text="@string/titulo_sino" />
+
+        <TextView
+            android:id="@+id/textSino"
+            style="@style/FichaTexto"
+            android:fontFamily="monospace"
+            android:text="@string/texto_sino" />
+
+        <TextView
+            android:id="@+id/textTituloDepoimentos"
+            style="@style/SubtituloFicha"
+            android:text="@string/titulo_depoimentos" />
+
+        <TextView
+            android:id="@+id/textDepoimentos"
+            style="@style/FichaTexto"
+            android:text="@string/texto_depoimentos" />
+
+        <!-- 4b. Evidência visual: ConstraintLayout com Guideline vertical em 50% -->
+        <TextView
+            android:id="@+id/textSecaoEvidenciaVisual"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_evidencia_visual" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutEvidenciaVisual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ficha"
+            android:padding="8dp">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEvidencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <ImageView
+                android:id="@+id/imageFotoPericia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/desc_imagem_pericia"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_foto_pericia"
+                app:layout_constraintEnd_toStartOf="@id/guidelineEvidencia"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textEvidenciaVisual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/texto_evidencia_visual"
+                android:textColor="@color/texto_papel"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guidelineEvidencia"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- 5. Evidência sonora -->
+        <TextView
+            android:id="@+id/textSecaoAudio"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_audio" />
+
+        <TextView
+            android:id="@+id/textDescricaoAudio"
+            style="@style/FichaTexto"
+            android:text="@string/texto_audio" />
+
+        <!-- Chain horizontal com Reproduzir / Pausar / Ao início -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutControlesAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/buttonReproduzir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@string/btn_reproduzir"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/buttonPausar"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonPausar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="@string/btn_pausar"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@id/buttonInicio"
+                app:layout_constraintStart_toEndOf="@id/buttonReproduzir"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonInicio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/btn_inicio"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/buttonPausar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Recuar / avançar: LinearLayout horizontal com weight -->
+        <LinearLayout
+            android:id="@+id/layoutRecuarAvancar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonRecuar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="@string/btn_recuar" />
+
+            <Button
+                android:id="@+id/buttonAvancar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="@string/btn_avancar" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textEstadoAudio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/estado_aguardando"
+            android:textColor="@color/dourado"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- 6. Solução do caso -->
+        <TextView
+            android:id="@+id/textSecaoSolucao"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_solucao" />
+
+        <TextView
+            android:id="@+id/textInstrucaoSolucao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_instrucao_solucao"
+            android:textColor="@color/texto_papel" />
+
+        <EditText
+            android:id="@+id/editResposta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/hint_resposta"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textCapWords"
+            android:minHeight="48dp"
+            android:textColor="@color/texto_papel"
+            android:textColorHint="@color/texto_sepia" />
+
+        <EditText
+            android:id="@+id/editJustificativa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="top|start"
+            android:hint="@string/hint_justificativa"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="4"
+            android:textColor="@color/texto_papel"
+            android:textColorHint="@color/texto_sepia" />
+
+        <Button
+            android:id="@+id/buttonVerificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/btn_verificar" />
+
+        <TextView
+            android:id="@+id/textResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- 7. Créditos -->
+        <TextView
+            android:id="@+id/textSecaoCreditos"
+            style="@style/CabecalhoSecao"
+            android:text="@string/secao_creditos" />
+
+        <TextView
+            android:id="@+id/textCreditos"
+            style="@style/FichaTexto"
+            android:text="@string/texto_creditos"
+            android:textColor="@color/texto_sepia"
+            android:textSize="13sp" />
+
+        <!-- 8. Voltar à central -->
+        <Button
+            android:id="@+id/buttonVoltar"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/btn_voltar" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

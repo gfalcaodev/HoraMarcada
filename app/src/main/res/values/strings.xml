@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Hora Marcada</string>
+
+    <!-- ===== Tela 1: Central de Investigação ===== -->
+    <string name="titulo_central">Central de Investigação · Vila Serena</string>
+    <string name="titulo_caso">Caso 117: O Relógio que Mentiu</string>
+    <string name="carimbo_confidencial">CONFIDENCIAL</string>
+    <string name="subtitulo_central">Uma transmissão desconhecida foi interceptada durante a madrugada, na mesma noite em que um relógio raríssimo sumiu de um cofre. Identifique-se para acessar o dossiê.</string>
+    <string name="desc_imagem_fachada">Ilustração noturna da praça de Vila Serena, com a fachada da Relojoaria Ponteiro à esquerda e a torre da Igreja Matriz com um sino tocando à direita</string>
+    <string name="hint_codinome">Codinome do investigador</string>
+    <string name="hint_codigo">Código de acesso</string>
+    <string name="label_prontidao">Nível de prontidão</string>
+    <string name="valor_prontidao">%1$d%%</string>
+    <string name="btn_limpar">Limpar</string>
+    <string name="btn_acessar">Acessar dossiê</string>
+    <string name="erro_codinome">O codinome deve ter pelo menos 3 caracteres</string>
+    <string name="erro_codigo">Código de acesso inválido</string>
+    <string name="erro_prontidao" formatted="false">A prontidão precisa ser de pelo menos 50%</string>
+    <string name="msg_acesso_liberado">Acesso liberado. Atenção aos detalhes!</string>
+
+    <!-- ===== Tela 2: Dossiê ===== -->
+    <string name="dossie_identificacao">DOSSIÊ CONFIDENCIAL · INQUÉRITO Nº 117/2026</string>
+    <string name="dossie_titulo">O Relógio que Mentiu</string>
+    <string name="dossie_classificacao">Classificação: SIGILOSO · Furto qualificado</string>
+
+    <string name="secao_resumo">1. Resumo da ocorrência</string>
+    <string name="texto_resumo">Na madrugada de 15 de março, o radioamador Seu Nonato estava mexendo no seu rádio quando interceptou uma transmissão desconhecida: barulhos de passos, bipes e vidro quebrando. Ele gravou 30 segundos, mas estava sonolento e não anotou o horário.\n\nDepois se descobriu que o sinal vinha do microfone sem fio de segurança da Relojoaria Ponteiro, que transmite por rádio.\n\nÀs 07h30, o dono da loja encontrou o cofre aberto e vazio. Sumiu o \"Aurora de 1889\", um relógio de bolso de ouro. Não havia sinais de arrombamento: o cofre foi aberto com a senha correta.\n\nNa parede, o relógio principal da loja estava com o vidro estilhaçado e os ponteiros parados em 01h00. Só três pessoas conheciam a senha do cofre. Descubra quem levou o Aurora.</string>
+
+    <string name="secao_suspeitos">2. Suspeitos e possíveis explicações</string>
+    <string name="suspeito_aurelio">Aurélio Ponteiro, 67 anos, dono da relojoaria\nO Aurora estava no seguro por um valor alto. Alguns acham que ele mesmo simulou o furto para receber a indenização.</string>
+    <string name="suspeito_livia">Lívia Moraes, 29 anos, vendedora\nTrabalha na loja de dia e, nas madrugadas, ajuda na Padaria Trigo Bom, do outro lado da praça. Conhece a senha porque fecha o caixa todas as noites.</string>
+    <string name="suspeito_rafael">Rafael Couto, 24 anos, aprendiz de relojoeiro\nConserta relógios na oficina dos fundos. Nas horas vagas é guitarrista da banda Os Ponteiros, que toca às sextas no Bar Compasso.</string>
+    <string name="hipotese_relogio">Possível explicação: o relógio quebrado marca a hora do crime\nComo os ponteiros pararam em 01h00, parte da equipe acredita que o furto aconteceu exatamente nesse horário.</string>
+
+    <string name="secao_evidencias">3. Evidências textuais</string>
+    <string name="titulo_laudo">Laudo da perícia técnica</string>
+    <string name="texto_laudo">• O cofre tem teclado de 4 dígitos: faz um bipe a cada tecla e um bipe longo quando a senha está certa. Nenhuma tentativa errada foi registrada.\n• A pilha do relógio de parede foi encontrada no chão, intacta, a meio metro dele.\n• Uma palheta de guitarra vermelha, com as letras \"OP\", estava caída perto do cofre.\n• O microfone sem fio da loja só transmite quando detecta movimento. Ele não registra horário.</string>
+    <string name="titulo_sino">Informação da Igreja Matriz</string>
+    <string name="texto_sino">A Igreja Matriz fica do outro lado da praça, a 40 metros da relojoaria. Durante toda a madrugada o sino bate de hora em hora, com uma badalada para cada hora:\n\n01h00 → 1 badalada\n02h00 → 2 badaladas\n03h00 → 3 badaladas\n04h00 → 4 badaladas</string>
+    <string name="titulo_depoimentos">Depoimentos colhidos às 09h00</string>
+    <string name="texto_depoimentos">AURÉLIO: \"Peguei o ônibus das 00h30 para a capital e só voltei às 07h. Está aqui a minha passagem, e o motorista lembra de mim.\"\n\nLÍVIA: \"Fiquei em casa sozinha até umas 02h30. Depois atravessei a praça para abrir a padaria. Às 3h eu já estava no forno com dois colegas.\"\n\nRAFAEL: \"Toquei com a banda no Bar Compasso até 01h30, o bar inteiro me viu. Depois fui direto para casa dormir.\"</string>
+
+    <string name="secao_evidencia_visual">4. Evidência visual</string>
+    <string name="desc_imagem_pericia">Foto da perícia dentro da relojoaria: um relógio de parede com o vidro quebrado parado em uma hora, uma pilha caída no chão, um cofre aberto e vazio e uma palheta de guitarra vermelha com as letras OP no chão, cada item marcado com uma placa numerada</string>
+    <string name="texto_evidencia_visual">Foto da perícia\n15/03 às 07h40\n\nMarcador 1: pilha do relógio.\nMarcador 2: palheta vermelha.\nMarcador 3: cofre aberto.\n\nCompare a hora do relógio com o que a pilha no chão sugere.</string>
+
+    <string name="secao_audio">5. Evidência sonora</string>
+    <string name="texto_audio">Transmissão interceptada por Seu Nonato (≈30 s). Escute com atenção até o final: um som que vem de fora da loja revela a hora verdadeira do furto.</string>
+    <string name="btn_reproduzir">Reproduzir</string>
+    <string name="btn_pausar">Pausar</string>
+    <string name="btn_inicio">Ao início</string>
+    <string name="btn_recuar">Recuar 10 s</string>
+    <string name="btn_avancar">Avançar 10 s</string>
+    <string name="estado_aguardando">Aguardando reprodução</string>
+    <string name="estado_reproduzindo">Reproduzindo</string>
+    <string name="estado_pausado">Pausado</string>
+    <string name="estado_parado">Parado</string>
+    <string name="estado_concluido">Reprodução concluída</string>
+
+    <string name="secao_solucao">6. Solucione o caso</string>
+    <string name="texto_instrucao_solucao">Quem furtou o Aurora de 1889? Escreva apenas o primeiro nome e explique quais evidências levaram você a essa conclusão.</string>
+    <string name="hint_resposta">Primeiro nome do responsável</string>
+    <string name="hint_justificativa">Justifique sua hipótese</string>
+    <string name="btn_verificar">Verificar solução</string>
+    <string name="erro_resposta_vazia">Informe o responsável</string>
+    <string name="erro_justificativa">A justificativa deve ter pelo menos 20 caracteres</string>
+    <string name="resultado_correto">Caso solucionado! Sua dedução corresponde às evidências encontradas.</string>
+    <string name="resultado_incorreto">Hipótese não confirmada. Analise novamente as evidências e o áudio.</string>
+
+    <string name="secao_creditos">7. Créditos</string>
+    <string name="texto_creditos">Imagens (fachada da relojoaria e foto da perícia): ilustrações originais desenhadas para este projeto.\n\nÁudio (transmissao_relojoaria.wav): som original criado para este projeto, com passos, bipes do teclado, vidro quebrando e o sino da igreja.\n\nHistória, personagens e lugares são fictícios.</string>
+
+    <string name="btn_voltar">Voltar à central</string>
+</resources>

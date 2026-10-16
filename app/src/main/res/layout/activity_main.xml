@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 1: Central de Investigação (ConstraintLayout como raiz) -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo_madeira"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTituloCentral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/titulo_central"
+        android:textColor="@color/texto_sepia"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageCapaCaso"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc_imagem_fachada"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_fachada_relojoaria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTituloCentral" />
+
+    <!-- Bias: o carimbo fica preso dos dois lados, mas empurrado para o final (1.0) -->
+    <TextView
+        android:id="@+id/textCarimbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_ficha"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="@string/carimbo_confidencial"
+        android:textColor="@color/vinho"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageCapaCaso" />
+
+    <TextView
+        android:id="@+id/textTituloCaso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/titulo_caso"
+        android:textColor="@color/dourado"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCarimbo" />
+
+    <TextView
+        android:id="@+id/textSubtitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/subtitulo_central"
+        android:textColor="@color/texto_sepia"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTituloCaso" />
+
+    <EditText
+        android:id="@+id/editCodinome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints="username"
+        android:hint="@string/hint_codinome"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        android:minHeight="48dp"
+        android:textColor="@color/texto_papel"
+        android:textColorHint="@color/texto_sepia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSubtitulo" />
+
+    <EditText
+        android:id="@+id/editCodigoAcesso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/hint_codigo"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:maxLength="3"
+        android:minHeight="48dp"
+        android:textColor="@color/texto_papel"
+        android:textColorHint="@color/texto_sepia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editCodinome" />
+
+    <TextView
+        android:id="@+id/textLabelProntidao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_prontidao"
+        android:textColor="@color/texto_papel"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editCodigoAcesso" />
+
+    <TextView
+        android:id="@+id/textValorProntidao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_prontidao"
+        android:textColor="@color/dourado"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@id/textLabelProntidao"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekProntidao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLabelProntidao" />
+
+    <!-- Chain horizontal (spread_inside) com os botões Limpar e Acessar dossiê -->
+    <Button
+        android:id="@+id/buttonLimpar"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/btn_limpar"
+        app:layout_constraintEnd_toStartOf="@id/buttonAcessar"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seekProntidao" />
+
+    <Button
+        android:id="@+id/buttonAcessar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_acessar"
+        app:layout_constraintBaseline_toBaselineOf="@id/buttonLimpar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonLimpar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema escuro em tons de madeira e dourado, como uma relojoaria antiga -->
+    <style name="Base.Theme.HoraMarcada" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/dourado</item>
+        <item name="colorOnPrimary">@color/fundo_madeira</item>
+        <item name="colorSecondary">@color/vinho</item>
+        <item name="android:colorBackground">@color/fundo_madeira</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/fundo_madeira</item>
+    </style>
+
+    <style name="Theme.HoraMarcada" parent="Base.Theme.HoraMarcada" />
+
+    <!-- Títulos das seções da investigação -->
+    <style name="CabecalhoSecao">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/dourado</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Blocos de texto com fundo de "ficha" -->
+    <style name="FichaTexto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_ficha</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:textColor">@color/texto_papel</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+
+    <style name="SubtituloFicha">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@color/texto_papel</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fundo_madeira">#1E1610</color>
+    <color name="cartao_couro">#2B2119</color>
+    <color name="borda_couro">#4A3A2C</color>
+    <color name="dourado">#E0B15A</color>
+    <color name="vinho">#E0644B</color>
+    <color name="verde_ok">#7BC67E</color>
+    <color name="texto_papel">#F2E8DA</color>
+    <color name="texto_sepia">#B5A48F</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
